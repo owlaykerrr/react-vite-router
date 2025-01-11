@@ -1,0 +1,26 @@
+@import '_variables';
+
+
+.app {
+    font-family: var(--main-font-family);
+    background-color: var(--content-background);
+    display: flex;
+    flex-direction: column; 
+    max-width: var(--main-width);
+}
+
+.login-button, .register-button {
+    color: var(-button-font-color);
+    background-color: var(--button-background);
+
+}
+
+.header {
+    background-color: var(--header-background);
+    height: 56px;
+}
+
+.footer {
+    background-color: var(--footer-background);
+    height: 56px;
+}
