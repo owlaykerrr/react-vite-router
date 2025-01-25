@@ -1,11 +1,14 @@
-import { createBrowserRouter, RouterProvider, Outlet } from 'react-router';
+import { createBrowserRouter, RouterProvider, Outlet, Link } from 'react-router';
 import { routes as publicRoutes } from '@/routes/routes';
-import { AppHeader } from './components/app-header/app-header';
-import { AppFooter } from './components/app-footer/app-footer';
-import '@styles/index.scss'
+
 
 function LayoutWrapper() {
-	return <Outlet />;
+	
+		<PageLayout>
+			<Outlet/>
+		</PageLayout>
+
+	
 }
 
 const router = createBrowserRouter([
@@ -16,13 +19,8 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-	return (
-		<div className="app">
-			<AppHeader />
-			<RouterProvider router={router} />
-			<AppFooter/>
-		</div>
-	);
+
+	return <RouterProvider router={router} /> 
 }
 
 export default App;
