@@ -1,8 +1,14 @@
-import { createBrowserRouter, RouterProvider, Outlet } from 'react-router';
+import { createBrowserRouter, RouterProvider, Outlet, Link } from 'react-router';
 import { routes as publicRoutes } from '@/routes/routes';
 
+
 function LayoutWrapper() {
-	return <Outlet />;
+	
+		<PageLayout>
+			<Outlet/>
+		</PageLayout>
+
+	
 }
 
 const router = createBrowserRouter([
@@ -13,7 +19,8 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-	return <RouterProvider router={router} />;
+
+	return <RouterProvider router={router} /> 
 }
 
 export default App;
